@@ -10,9 +10,12 @@ object celeste{
 }
 
 object verde{
-  method fuerte() = false
+  method fuerte() = true
 }
 
+object naranja{
+  method fuerte() = true
+}
 
 object lino{ 
   method brilla() = false
@@ -55,9 +58,43 @@ object biblioteca{
 object munieco{
   var peso = 100
   method peso() = peso
+  method peso(nuevo) {peso = nuevo}
   method color() = celeste
   method material() = vidrio
 }
 
+object placa{
+  var peso = 0
+  var color = rojo
+  method peso() = peso
+  method color() = color
+  method material() = cobre
+  method peso(nuevo) {peso = nuevo}
+  method color(nuevo) {color = nuevo}
+}
 
+object arito{
+  method color() = celeste
+  method material() = cobre
+  method peso() = 180
+}
+
+
+object banquito{
+  var color = naranja
+  method peso() = 1700
+  method material() = madera
+  method color() = color
+  method color(nuevo) {color = nuevo}
+}
+
+object cajita{
+  var objetoInterno = arito
+  method color() = rojo
+  method material() = cobre
+  method peso() { 400 + objetoInterno.peso() }
+  method objetoInterno(unObjeto) {
+    objetoInterno = unObjeto
+  }
+}
 
